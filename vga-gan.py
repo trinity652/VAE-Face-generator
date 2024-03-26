@@ -12,7 +12,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-dataset = datasets.CelebA(root='./data', split='train', download=True, transform=transform)
+dataset = datasets.CelebA(root='./data/img_align_celeba/', split='train', download=True, transform=transform)
 dataloader = DataLoader(dataset, batch_size=128, shuffle=True)
 
 
