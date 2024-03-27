@@ -27,7 +27,7 @@ def display_images(images):
 def main():
     st.title('VAE Generated Images')
 
-    model_path = st.text_input('Enter model path:', 'runs/checkpoints/epoch_10.pth')
+    model_path = st.text_input('Enter model path:', './runs/checkpoints/epoch_9.pth')
     if model_path:
         model = load_model(model_path)
         st.success('Model loaded successfully!')

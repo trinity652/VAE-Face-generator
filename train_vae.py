@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
@@ -12,7 +13,7 @@ transform = transforms.Compose([
     transforms.Resize((64, 64)),
     transforms.ToTensor(),
 ])
-dataset_path = '/data/img_align_celeba/'
+dataset_path = './data/'
 dataset = datasets.ImageFolder(root=dataset_path, transform=transform)
 dataloader = DataLoader(dataset, batch_size=128, shuffle=True)
 
